@@ -1,0 +1,24 @@
+# anotacoes do django
+
+
+
+# antes é bom colocar o cmd ou pw em serviço virtual usando o comando:
+# python -m venv venv, depois ativa .\venv\Scripts\activate
+# o comando python .\manage runserver inicia o servidor, geralmente o arquivo de configuração do projto
+# sempre é o manager.
+# para iniciar o projeto o comando é django-admin startproject seguido pelo nome do projeto
+# para iniciar o app do projeto o comando é python .\manage startapp seguido pelo nome do blog
+# o startapp cria uma pasta com o nome do app, ele cria o models, views e etc
+
+
+# Ao fazer o migration tenho que adicionar uma referencia no settings, no caso no apps.py
+# o comando para fazer o migrations é o python .\manage.py makemigrations blog (blog pq é o nome do app em questão)
+# então ele cria o #001_initial e uma pasta migrations
+# depois coloca python .\manage.py sqlmigrate blog 0001, ele cria um model na base de dados
+# após isso é só fazer a migração python .\manage.py migrate blog
+
+
+
+# depois disso hora de criar o super usuario que vai administrar o site, entao entramos no acesso ao django admin
+# o comando para criar o super usuario é: python .\manage.py createsuperuser, depois só executar o django novamente
+# com o  python .\manage runserver para abrir a interface de adm django
